@@ -1,4 +1,7 @@
 package domain;
 
-public class ConstraintType {
+public enum ConstraintType {
+    TIME,
+    ENERGY,
+    CONTEXT
 }
