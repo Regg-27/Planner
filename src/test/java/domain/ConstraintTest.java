@@ -16,4 +16,13 @@ public class ConstraintTest {
             new Constraint(id, ConstraintType.TIME, "Too much work", 6);
         });
     }
+
+    @Test
+    void constraintMustHaveAType() {
+        UUID id = UUID.randomUUID();
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Constraint(id, null, "No type provided", 3);
+        });
+    }
 }
